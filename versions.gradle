@@ -1,0 +1,32 @@
+def build_android = [:]
+build_android.compile_sdk = 29
+build_android.build_tools = "29.0.2"
+
+build_android.min_sdk = 22
+build_android.target_sdk = 29
+
+build_android.version_code = 1
+build_android.version_name = "1.0.0"
+// 混淆
+build_android.minify_enabled = false
+ext.build_android = build_android
+
+ext {
+    arouter_api = '1.5.0'
+    arouter_compiler = '1.2.2'
+    utilcodex = '1.28.4'
+    retrofit = '2.8.1'
+    converter_gson = '2.8.1'
+    converter_scalars = '2.8.1'
+    adapter_rxjava2 = '2.8.1'
+    rxjava = '2.2.8'
+    rxandroid = '2.1.1'
+    autodispose_android_archcomponents = '1.4.0'
+    eventbus = '3.2.0'
+    BaseRecyclerViewAdapterHelper = '3.0.3'
+    leakcanary = '2.3'
+    glide = '4.11.0'
+    glide_compiler = '4.11.0'
+    glide_transformations = '4.1.0'
+
+}

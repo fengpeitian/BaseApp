@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fpt.base" >
+
+    <application
+        android:name=".app.GlobalApplication"
+        android:requestLegacyExternalStorage="true"
+        android:networkSecurityConfig="@xml/network_security_config" >
+
+        <!-- android 9.0 http请求 -->
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <!-- Glide替换网络加载框架并进度监听 -->
+        <meta-data
+            android:name="com.fpt.base.glide.MyGlideModule"
+            android:value="GlideModule" />
+
+        <!-- 全局Context提供者 -->
+        <provider
+            android:name=".app.ApplicationContextProvider"
+            android:authorities="${applicationId}.contextprovider"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
